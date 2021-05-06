@@ -1,0 +1,16 @@
+<%- include('partials/header'); -%>
+
+
+<h1>Home</h1>
+
+<p><%= homeText %></p>
+
+
+    <% posts.forEach(function(post){  %>                               <%#for(var i=0;i<posts.length;i++){ alternat code in jscript instead of using for loop use name.forEAch%>
+      <h1><%= post.title %></h1>
+      <p><%= post.content.substring(0,100)+" ....." %>
+        <a class="read" href="/posts/<%=post.title%>">Read more</a></p>
+    <% }) %>
+
+
+<%- include('partials/footer'); -%>
